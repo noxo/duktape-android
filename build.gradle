@@ -1,14 +1,14 @@
 ext {
   compileSdkVersion = 26
   buildToolsVersion = '26.0.2'
-  buildGradleVersion = '3.0.1'
+  buildGradleVersion = '8.5.1'
   ndkAbiFilters = ['x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a']
 }
 
 allprojects {
   buildscript {
     repositories {
-      jcenter()
+      mavenCentral()
       google()
     }
     dependencies {
@@ -16,7 +16,7 @@ allprojects {
     }
   }
   repositories {
-    jcenter()
+    mavenCentral()
     google()
   }
 }

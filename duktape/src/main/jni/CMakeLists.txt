@@ -9,3 +9,4 @@ file(GLOB_RECURSE duktape_SRC
 add_library(duktape SHARED ${duktape_SRC})
 
 target_link_libraries(duktape)
+target_link_options(duktape PRIVATE "-Wl,-z,max-page-size=16384")

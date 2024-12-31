@@ -3,9 +3,9 @@ apply plugin: 'com.android.library'
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
-
+  namespace  = "com.squareup.duktape"
   defaultConfig {
-    minSdkVersion 12
+    minSdkVersion 21
     targetSdkVersion 28
     versionCode 1
     versionName "1.0"
@@ -50,22 +50,22 @@ dependencies {
   implementation 'com.android.support:support-annotations:27.1.1'
 }
 
-task sourcesJar(type: Jar) {
-  from android.sourceSets.main.java.srcDirs
-  classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-  source = android.sourceSets.main.java.srcDirs
-  classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-  classifier = 'javadoc'
-  from javadoc.destinationDir
-}
-
-artifacts {
-  archives javadocJar
-  archives sourcesJar
-}
+//task sourcesJar(type: Jar) {
+//  from android.sourceSets.main.java.srcDirs
+//  classifier = 'sources'
+//}
+//
+//task javadoc(type: Javadoc) {
+//  source = android.sourceSets.main.java.srcDirs
+//  classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//}
+//
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//  classifier = 'javadoc'
+//  from javadoc.destinationDir
+//}
+//
+//artifacts {
+//  archives javadocJar
+//  archives sourcesJar
+//}
