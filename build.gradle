@@ -1,6 +1,6 @@
 ext {
   compileSdkVersion = 26
-  buildToolsVersion = '26.0.2'
+  buildToolsVersion = '34.0.0'
   buildGradleVersion = '8.5.1'
   ndkAbiFilters = ['x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a']
 }
